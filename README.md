@@ -63,18 +63,6 @@ Built for **lead generation**, **territory planning**, **competitor scans**, and
  <img width="1200" height="450" alt="Image" src="https://github.com/user-attachments/assets/a62aa1c0-1f3b-4ea4-a6f4-167fe61050cd" />
 </p>
 
-**Flow (high level):**  
-Input (query + geo) → Target Builder (grid/tiles or polygon) → Fetch Layer (search → result cards → detail pages) → Parser → Normalizer → Dedupe (place_id/url) → Validator → Exporters (CSV/JSON/Sheets/Airtable/Webhook) → Observability (logs/metrics)
-
----
-
-## Workflow
-<p align="center">
-  <img alt="Workflow" src="assets/workflow.png" width="1536" height="500">
-</p>
-
-1) Input query/geo → 2) Build targets → 3) Rate limit on → 4) Search results crawl → 5) Open place detail → 6) Parse fields → 7) Normalize → 8) Dedupe → 9) Validate → 10) Export
-
 ---
 
 ## Data Schema
