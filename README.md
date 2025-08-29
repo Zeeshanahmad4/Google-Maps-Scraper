@@ -124,9 +124,9 @@ A: Depends on query density, pagination, and throttling.
 
 Questions? Need a custom scraper or integrations?
 
- Website:  https://www.bitbash.dev/ <br>
- Discord:  https://discord.gg/zX7frTbx  <br>
- Telegram: https://t.me/devpilot1  <br>
+ Website:  https://www.bitbash.dev/<br>
+ Discord:  https://discord.gg/zX7frTbx<br>
+ Telegram: https://t.me/devpilot1<br>
 
 ---
 
