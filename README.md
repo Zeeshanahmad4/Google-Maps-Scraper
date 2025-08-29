@@ -1,4 +1,4 @@
-# <img src="https://github.com/user-attachments/assets/5668a032-856c-4270-898d-890625e12dfb" alt="Image" width="50" height="50"> Google Maps Scraper
+# Google Maps Scraper
 
 <p align="center">
 Extract local business data from Google Maps into clean CSV/JSON for lead gen, market research, and ops.
