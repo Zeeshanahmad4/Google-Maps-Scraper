@@ -69,77 +69,29 @@ Built for **lead generation**, **territory planning**, **competitor scans**, and
 
 ```python
 
-# 2) scrape.py
-import json, time, pandas as pd
+import json, pandas as pd, time
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 
-def normalize_place(p):
-    p["scraped_at"] = datetime.utcnow().isoformat() + "Z"
-    return p
-
-def parse_place_card(card):
-    name = card.get_attribute("aria-label") or card.inner_text().split("\n")[0]
-    url = card.get_attribute("href") or ""
-    return {"name": name, "url": url}
-
-def scrape(query="dentist", city="Austin, TX", max_results=100):
-    rows, seen = [], set()
+def scrape(q="dentist", city="Austin,TX", n=20):
     with sync_playwright() as pw:
-        b = pw.chromium.launch(headless=True)
-        page = b.new_page()
-        page.goto(f"https://www.google.com/maps/search/{query}+in+{city}")
-        page.wait_for_selector('[role="feed"]', timeout=20000)
+        b = pw.chromium.launch(headless=True); p = b.new_page()
+        p.goto(f"https://www.google.com/maps/search/{q}+in+{city}"); p.wait_for_selector('[role="feed"]')
+        data=[]; seen=set()
+        for a in p.query_selector_all('a[href^="https://www.google.com/maps/place"]')[:n]:
+            url=a.get_attribute("href"); 
+            if not url or url in seen: continue; seen.add(url)
+            p2=b.new_page(); p2.goto(url); tx=lambda s:(e:=p2.query_selector(s)) and e.inner_text().strip()
+            data.append({"name":a.get_attribute("aria-label") or "", "url":url, "category":tx('[jslog*="breadcrumb"]') or "",
+                        "rating":float((tx('span[aria-label*="stars"]') or "0").split()[0]), 
+                        "reviews":int("".join(c for c in (tx('button[aria-label*="reviews"]')or"") if c.isdigit()) or 0),
+                        "address":tx('button[data-item-id="address"]') or "", "phone":tx('button[data-item-id^="phone:tel:"]') or "",
+                        "website":tx('a[data-item-id="authority"]') or "", "scraped_at":datetime.utcnow().isoformat()+"Z"}); p2.close(); time.sleep(.6)
+        b.close(); return data
 
-        cards = page.query_selector_all('a[href^="https://www.google.com/maps/place"]')
-        for a in cards[:max_results]:
-            base = parse_place_card(a)
-            if base["url"] in seen: continue
-            seen.add(base["url"])
+if __name__=="__main__": d=scrape(); pd.DataFrame(d).to_csv("places.csv",index=False); json.dump(d,open("places.json","w"),indent=2)
 
-            # open detail in new tab
-            page2 = b.new_page()
-            page2.goto(base["url"])
-            page2.wait_for_timeout(1500)
-
-            def tx(sel):
-                el = page2.query_selector(sel)
-                return el.inner_text().strip() if el else ""
-
-            row = {
-                "place_id": page2.url.split("!3m1!")[0][-27:] if "!3m1!" in page2.url else "",
-                "name": base["name"],
-                "category": tx('[jslog*="breadcrumb"]') or "",
-                "rating": float((tx('span[aria-label*="stars"]') or "0").split()[0] or 0),
-                "reviews_count": int(''.join([c for c in tx('button[aria-label*="reviews"]') if c.isdigit()] or "0") or 0),
-                "address": tx('button[data-item-id="address"]') or "",
-                "phone": tx('button[data-item-id^="phone:tel:"]') or "",
-                "website": tx('a[data-item-id="authority"]') or "",
-                "lat": None, "lng": None,
-                "url": page2.url
-            }
-            rows.append(normalize_place(row))
-            page2.close()
-            time.sleep(0.8)  # throttle
-
-        b.close()
-    return rows
-
-if __name__ == "__main__":
-    data = scrape(query="dentist", city="Austin, TX", max_results=40)
-    pd.DataFrame(data).to_csv("output/places.csv", index=False)
-    with open("output/places.json","w",encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"Wrote {len(data)} rows to output/")
 ```
-
----
-#  Run
-``` bash
-mkdir -p output
-python scrape.py
-
-``` 
 
 ---
 
