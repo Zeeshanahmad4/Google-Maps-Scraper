@@ -1,4 +1,4 @@
-# 🗺️ Google Maps Scraper
+# ![Image](https://github.com/user-attachments/assets/deca836d-10aa-450c-867d-de1857695519) Google Maps Scraper
 
 <p align="center">
 Extract local business data from Google Maps into clean CSV/JSON for lead gen, market research, and ops.
