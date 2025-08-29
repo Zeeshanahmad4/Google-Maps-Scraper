@@ -133,6 +133,7 @@ if __name__ == "__main__":
     print(f"Wrote {len(data)} rows to output/")
 ```
 
+---
 #  Run
 ``` bash
 mkdir -p output
@@ -140,20 +141,21 @@ python scrape.py
 
 ``` 
 
+---
 ## Examples
 
 examples/sample.csv <br?
 examples/sample.json
 
+---
 ## Roadmap
 
- Polygon/geojson targeting <br>
- Sheets & Airtable exporters <br>
- Phone/URL normalization helpers <br>
- Proxy pool + retries <br>
- Docker image + CI <br>
- Basic QA dashboard (errors, throughput) <br>
+- [ ]  Polygon/geojson targeting <br>
+- [ ]  Sheets & Airtable exporters <br>
+- [ ]  Phone/URL normalization helpers <br>
+- [ ]  Proxy pool + retries <br>
 
+---
 ## FAQ
 
 Q: Does this bypass Google’s protections? <br>
@@ -165,6 +167,7 @@ A: Yes, but fields may vary by locale.
 Q: How many results per run? <br>
 A: Depends on query density, pagination, and throttling.
 
+---
 ## License
 
 MIT 
