@@ -5,7 +5,7 @@ Extract local business data from Google Maps into clean CSV/JSON for lead gen, m
 </p>
 
 <p align="center">
-  <img alt="Header" src="assets/header.png" width="1536" height="500">
+ <img width="1400" height="550" alt="Image" src="https://github.com/user-attachments/assets/ebd5c2b9-170c-4e44-acf0-ff5789e4a3e1" />
 </p>
 
 ---
