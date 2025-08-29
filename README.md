@@ -118,7 +118,19 @@ A: Depends on query density, pagination, and throttling.
 ## License
 
 MIT 
+---
 
+## Contact Us
+
+Questions? Need a custom scraper or integrations?
+
+ Website: https://www.bitbash.dev/ <br>
+ Discord: https://discord.gg/zX7frTbx  <br>
+ Telegram: https://t.me/devpilot1  <br>
+
+---
+
+<img width="1536" height="270" alt="Image" src="https://github.com/user-attachments/assets/fae69c91-6792-41ee-a073-50f46ba38788" />
 
 
 
