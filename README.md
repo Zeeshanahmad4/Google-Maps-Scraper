@@ -142,12 +142,7 @@ python scrape.py
 ``` 
 
 ---
-## Examples
 
-examples/sample.csv <br?
-examples/sample.json
-
----
 ## Roadmap
 
 - [ ]  Polygon/geojson targeting <br>
