@@ -60,7 +60,7 @@ Built for **lead generation**, **territory planning**, **competitor scans**, and
 
 ## Architecture
 <p align="center">
- <img width="1200" height="400" alt="Image" src="https://github.com/user-attachments/assets/a62aa1c0-1f3b-4ea4-a6f4-167fe61050cd" />
+ <img width="1200" height="450" alt="Image" src="https://github.com/user-attachments/assets/a62aa1c0-1f3b-4ea4-a6f4-167fe61050cd" />
 </p>
 
 **Flow (high level):**  
