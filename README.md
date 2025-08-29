@@ -15,15 +15,12 @@ Extract local business data from Google Maps into clean CSV/JSON for lead gen, m
 2. [Features](#features)
 3. [What You Can Do](#what-you-can-do)
 4. [Architecture](#architecture)
-5. [Workflow](#workflow)
-6. [Data Schema](#data-schema)
-7. [Quick Start](#quick-start)
-8. [Examples](#examples)
-9. [Responsible Use](#responsible-use)
-10. [Roadmap](#roadmap)
-11. [FAQ](#faq)
-12. [License](#license)
-13. [Contact](#contact)
+5. [Python Code Example](#python-code-example)
+6. [Roadmap](#roadmap)
+7. [FAQ](#faq)
+8. [License](#license)
+9. [Contact Us](#contact-us)
+
 
 ---
 
