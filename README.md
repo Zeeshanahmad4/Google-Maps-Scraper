@@ -65,29 +65,5 @@ Built for **lead generation**, **territory planning**, **competitor scans**, and
 
 ---
 
-## Data Schema
 
-### Table
-| Field | Type | Example |
-|---|---|---|
-| place_id | string | ChIJN1t_tDeuEmsRUsoyG83frY4 |
-| name | string | “Acme Dental Clinic” |
-| category | string | “Dentist” |
-| rating | number | 4.6 |
-| reviews_count | integer | 128 |
-| price_level | integer \| null | 2 |
-| address | string | “123 Main St, Austin, TX 78701” |
-| city | string | “Austin” |
-| state | string | “TX” |
-| postal_code | string | “78701” |
-| country | string | “US” |
-| phone | string | “+1 512-555-1234” |
-| website | string | “https://acmedental.com” |
-| plus_code | string \| null | “PR5F+7Q Austin, Texas” |
-| lat | number | 30.2672 |
-| lng | number | -97.7431 |
-| opening_hours | object \| null | `{ "mon":"09:00-17:00", ... }` |
-| status | string | “OPEN_NOW” |
-| url | string | Place share URL |
-| scraped_at | string(ISO) | “2025-08-29T10:30:00Z” |
 
