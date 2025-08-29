@@ -91,33 +91,3 @@ Built for **lead generation**, **territory planning**, **competitor scans**, and
 | url | string | Place share URL |
 | scraped_at | string(ISO) | “2025-08-29T10:30:00Z” |
 
-### JSON Schema (`/schema/place.schema.json`)
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Place",
-  "type": "object",
-  "required": ["place_id", "name", "lat", "lng", "url", "scraped_at"],
-  "properties": {
-    "place_id": {"type":"string"},
-    "name": {"type":"string"},
-    "category": {"type":"string"},
-    "rating": {"type":"number"},
-    "reviews_count": {"type":"integer"},
-    "price_level": {"type":["integer","null"]},
-    "address": {"type":"string"},
-    "city": {"type":"string"},
-    "state": {"type":"string"},
-    "postal_code": {"type":"string"},
-    "country": {"type":"string"},
-    "phone": {"type":"string"},
-    "website": {"type":"string"},
-    "plus_code": {"type":["string","null"]},
-    "lat": {"type":"number"},
-    "lng": {"type":"number"},
-    "opening_hours": {"type":["object","null"]},
-    "status": {"type":"string"},
-    "url": {"type":"string"},
-    "scraped_at": {"type":"string", "format":"date-time"}
-  }
-}
