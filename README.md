@@ -113,8 +113,9 @@ A: Depends on query density, pagination, and throttling.
 
 ---
 ## License
-
+---
 MIT — see [LICENSE](./LICENSE)
+
 ---
 
 ## Contact Us
