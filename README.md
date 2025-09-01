@@ -113,17 +113,22 @@ A: Depends on query density, pagination, and throttling.
 
 ---
 ## License
- MIT 
-
+MIT — see [LICENSE](./LICENSE)
 ---
 
 ## Contact Us
 
 Questions? Need a custom scraper or integrations?
 
- Website:  https://www.bitbash.dev/<br>
- Discord:  https://discord.gg/zX7frTbx<br>
- Telegram: https://t.me/devpilot1<br>
+<p align="center">
+  <a href="https://discord.gg/zX7frTbx">
+    <img alt="Discord contact" src="https://img.shields.io/badge/Discord-Appilot-5865F2?logo=discord&logoColor=white&style=for-the-badge">
+  </a>
+  <a href="https://t.me/devpilot1">
+    <img alt="Telegram contact" src="https://img.shields.io/badge/Telegram-@devpilot1-2CA5E0?logo=telegram&logoColor=white&style=for-the-badge">
+  </a>
+</p>
+
 
 ---
 
