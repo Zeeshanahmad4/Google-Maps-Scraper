@@ -47,6 +47,14 @@ Built for **lead generation**, **territory planning**, **competitor scans**, and
 
 ---
 
+## Try Free Now:
+
+
+
+
+
+---
+
 ## What You Can Do
 - Build **B2B lead lists** (e.g., “dentists in Austin within 15km”)
 - Audit **categories/ratings** for competitive scans
