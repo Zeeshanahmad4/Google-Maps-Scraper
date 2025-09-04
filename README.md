@@ -48,7 +48,7 @@ Built for **lead generation**, **territory planning**, **competitor scans**, and
 ---
 
 ## Try Free Now:
-
+<img width="1536" height="500" alt="Image" src="https://github.com/user-attachments/assets/d55ec1ee-4357-47cd-82ee-881c4b938cda" />
 
 
 
